@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --ps-navy: #003366;
+  --ps-navy-light: #004080;
+  --ps-navy-dark: #002244;
+  --ps-lime: #7CB342;
+  --ps-lime-light: #9CCC65;
+  --ps-lime-dark: #689F38;
+  --ps-red: #DC2626;
+  --ps-red-light: #EF4444;
+  --ps-white: #FFFFFF;
+  --ps-gray-50: #F9FAFB;
+  --ps-gray-100: #F3F4F6;
+  --ps-gray-200: #E5E7EB;
+  --ps-gray-300: #D1D5DB;
+  --ps-gray-400: #9CA3AF;
+  --ps-gray-500: #6B7280;
+  --ps-gray-600: #4B5563;
+  --ps-gray-700: #374151;
+  --background: #F9FAFB;
+  --foreground: #1F2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ps-navy: var(--ps-navy);
+  --color-ps-navy-light: var(--ps-navy-light);
+  --color-ps-navy-dark: var(--ps-navy-dark);
+  --color-ps-lime: var(--ps-lime);
+  --color-ps-lime-light: var(--ps-lime-light);
+  --color-ps-lime-dark: var(--ps-lime-dark);
+  --color-ps-red: var(--ps-red);
+  --color-ps-red-light: var(--ps-red-light);
+  --color-ps-white: var(--ps-white);
+  --color-ps-gray-50: var(--ps-gray-50);
+  --color-ps-gray-100: var(--ps-gray-100);
+  --color-ps-gray-200: var(--ps-gray-200);
+  --color-ps-gray-300: var(--ps-gray-300);
+  --color-ps-gray-400: var(--ps-gray-400);
+  --color-ps-gray-500: var(--ps-gray-500);
+  --color-ps-gray-600: var(--ps-gray-600);
+  --color-ps-gray-700: var(--ps-gray-700);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Bottom navigation safe area */
+main {
+  padding-bottom: 5.5rem;
+}
+
+/* Leaflet map container */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ps-gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ps-gray-400);
+  border-radius: 3px;
+}
+
+/* Toggle switch animation */
+.toggle-has {
+  background-color: var(--ps-lime);
+}
+.toggle-needs {
+  background-color: var(--ps-red);
+}
