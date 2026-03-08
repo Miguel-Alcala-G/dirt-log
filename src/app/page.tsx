@@ -182,8 +182,8 @@ export default function DashboardPage() {
                 tick={{ fontSize: 11 }}
               />
               <Tooltip
-                formatter={(value: number) => [`${value.toLocaleString()} ${unitLabel}`, 'Net']}
-                labelFormatter={(label: string) => {
+                formatter={(value) => [`${Number(value).toLocaleString()} ${unitLabel}`, 'Net']}
+                labelFormatter={(label) => {
                   const item = chartData.find(d => d.name === label);
                   return item?.fullName || label;
                 }}
@@ -211,7 +211,7 @@ export default function DashboardPage() {
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
               <XAxis dataKey="county" tick={{ fontSize: 12 }} />
               <YAxis tick={{ fontSize: 12 }} />
-              <Tooltip formatter={(value: number) => [`${value.toLocaleString()} ${unitLabel}`, 'Available']} />
+              <Tooltip formatter={(value) => [`${Number(value).toLocaleString()} ${unitLabel}`, 'Available']} />
               <Bar dataKey="available" name={`Available ${unitLabel}`} fill="#7CB342" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
